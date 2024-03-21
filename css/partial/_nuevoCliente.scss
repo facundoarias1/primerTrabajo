@@ -1,0 +1,49 @@
+.body12{
+    background-image: url(/imagenes.jpg/producto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    
+.nuevo-cliente{
+    text-align: center;
+    font-family: 800;
+    font-size: 100px;
+    font-style: italic;
+    position: static;
+    
+    }
+
+    .registrate{
+        text-align: center;
+        text-decoration: underline;
+        font-size: 50px;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;}
+        
+            .formulario{
+                display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-wrap: wrap;
+               flex-direction: column;
+               background-color: black;
+               width: 500px;
+               height: 500px;
+            }
+        
+            .label1{
+                color: pink;
+                box-shadow: lightseagreen;
+                
+                }
+                
+        
+        
+    
+    
+    

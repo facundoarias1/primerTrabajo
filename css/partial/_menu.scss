@@ -1,0 +1,26 @@
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    list-style-type: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    
+.menuPa a{
+    color: aqua;
+    text-decoration: none;
+    
+    }
+    
+    .menuPa a:hover{
+        color: purple;
+      
+    }
+
+    
+
+}
+

@@ -1,0 +1,45 @@
+
+.grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "inicio     producto"
+    "nuevo-contacto quienes-somos";
+    min-height: 100vh;
+    list-style-type:none;}
+    
+    .ini{
+        grid-area: inicio;
+
+        background-color: red;
+        background-image: url(/imagenes.jpg/portada\ -\ copia.webp);
+        background-size: cover;
+        }
+        
+        .pro{
+        grid-area: producto;
+        background-color: gray;
+        background-image: url(/imagenes.jpg/producto.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        }
+        
+        .qui{
+        grid-area: quienes-somos;
+        background-color: white;
+        background-image: url(/imagenes.jpg/quienes\ somos.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        }
+        
+        .nue{
+        grid-area: nuevo-contacto;
+        background-color:white;
+        background-image: url(/imagenes.jpg/contacto.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        }
+    
