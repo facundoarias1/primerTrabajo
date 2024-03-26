@@ -1,83 +1,74 @@
 .bodyp{
-    background-color: blueviolet;
-}
-
-.conteinerPizza{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     background-color: bisque;
+}
+.p{
+    text-align: center;
+    font-size: 60px;
+    color: coral;
+}
+.contenedor-carta{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    width: 300px;
+    height: 500px;
+    border: 3px solid red;
+    min-height:max-content; 
+    background-color: white ;
+    margin: 4px;
+   
 
-    .pizza{
-        width: 300px;
-        height: 420px;
-        background-color: white;
-        border-radius: 5px;
-        margin: 15px 20px;
+   .imgP, img{
+       background: url(/imagenes.jpg/napo.jpeg) center;
+       background-size: contain;
+       max-width: 100%;
+      
+    }
+    .contenedor-cosas{
+        margin: 2px;
+        padding: 20px 0 0 0 ;
+        display: flex;
         align-items: center;
-    
-        .carta{
-            height: 125px;
-            width: 100%;
-            position: relative;
-            }
+        flex-direction: column;
         
-         .img1{
-            width: 150px;
-            height: 150px;
-            position: absolute;
-            background:white;
-            padding: 5px;
-            border-radius: 50%;
-            bottom: -30%;
-            left: 50%;
-            transform: translate(-50%);
-    
-            img{
-                width: 100%;
-                 height: 100%;
-                object-fit: cover;
-            }
-            }
-    
-        .descripcionP{
+        
+        
+        h4{
             text-align: center;
-            color: grey;
-            font-weight: 700px;
-    
-    
-            p{
-                text-align: center;
-                font-size: 15px;
-            }
-        }
-        .compra{
-            width: 100%;
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          
-           a{
-            text-decoration: none;
-        color: white;
-        background: green;
-        padding: 5px 20px;
-        border-radius: 5px;
-        transition: .3s; 
-    
+            font-size: 20px;
+            color: aqua;
+            text-shadow: 10px 3px 7px black;
             
-           }
-           a:hover{
-            color: blueviolet;
-           }
-    
+         }
+        .ulP{
+            list-style-type: "🍕";
+            padding-top: 5px;
+            margin: 2px;
         }
+    }
+
+  
+   
+    .encargar{
+      display: flex;
+       justify-content: center;
+       padding-top: 50px;
+       margin: 2px;
+
+       input:hover{
+        color: blue;
+        box-shadow: 0 20px 20px black;
+        background-color: brown;
+       }    
     
     }
+
+
+
+   &:hover{
+        box-shadow: 20px 40px 40px brown;
+    }
+
+
     
-
 }
-
