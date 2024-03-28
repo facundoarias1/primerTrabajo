@@ -24,44 +24,53 @@
 
 .grid1 {
   display: grid;
+  min-height: 100vh;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "inicio     producto" "nuevo-contacto quienes-somos";
-  min-height: 100vh;
+  grid-template-areas: "inicio   producto" "nuevo  quienes";
   list-style-type: none;
 }
 
 .ini {
   grid-area: inicio;
   background-color: red;
-  background-image: url(/imagenes.jpg/portada\ -\ copia.webp);
-  background-size: cover;
+  background-size: contain;
+  background-image: url(../../imagenes.jpg/facundo.arias);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .pro {
   grid-area: producto;
   background-color: gray;
-  background-image: url(/imagenes.jpg/producto.jpg);
+  background-image: url(../../imagenes.jpg/producto.jpg);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .qui {
-  grid-area: quienes-somos;
-  background-color: white;
-  background-image: url(/imagenes.jpg/quienes\ somos.png);
+  grid-area: quienes;
+  background-color: black;
+  background-image: url(../../imagenes.jpg/quienes\ somos.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .nue {
-  grid-area: nuevo-contacto;
+  grid-area: nuevo;
   background-color: white;
-  background-image: url(/imagenes.jpg/contacto.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-image: url(../../imagenes.jpg/contacto.png);
 }
 
+@media (max-width: 800px) {
+  .grid1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "inicio" "producto" "quienes" "nuevo";
+  }
+}
 .body12 {
   background-image: url(/imagenes.jpg/producto.jpg);
   background-repeat: no-repeat;
@@ -105,16 +114,11 @@ form {
   box-shadow: lightseagreen;
 }
 
-.Color {
-  background-color: bisque;
-}
-
 .bodyQ {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: bisque;
   flex-wrap: wrap;
 }
 
@@ -214,6 +218,15 @@ form {
   background-color: bisque;
 }
 
+.body1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 .p {
   text-align: center;
   font-size: 60px;
@@ -233,9 +246,11 @@ form {
   margin: 4px;
 }
 .contenedor-carta .imgP, .contenedor-carta img {
-  background: url(/imagenes.jpg/napo.jpeg) center;
+  background: url(../imagenes.jpg/napo.jpeg) center;
   background-size: contain;
   max-width: 100%;
+  height: 200px;
+  width: 400px;
 }
 .contenedor-carta .contenedor-cosas {
   margin: 2px;
@@ -270,85 +285,82 @@ form {
   box-shadow: 20px 40px 40px brown;
 }
 
-.bodyp-1 {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  transition: 0.5s;
+.body-q {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+  background: #333;
 }
 
-.footer1 {
-  width: 100%;
+.footer {
   position: relative;
-  bottom: 0;
-  left: 0;
-  padding: 2rem 8%;
-  background-color: #0e0e0e;
+  width: 100%;
+  background-color: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.social-icons-container, .footer-menu-container {
+.socialIcons {
+  position: relative;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 10px 0;
+  flex-wrap: wrap;
 }
 
-.social-icon {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 1px solid white;
-  background-image: url(/imagenes.jpg/facebook.png);
-  background-position: center;
-  background-size: 40%;
-  background-repeat: no-repeat;
-  margin: 1rem;
+.footerNav ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
 }
 
-.social-icon:hover {
-  background-color: #121212;
-  filter: invert(1);
-}
-
-.social-icon:nth-last-of-type(2) {
-  background-image: url(/imagenes.jpg/instagram.png);
-}
-
-.social-icon:nth-last-of-type(3) {
-  background-image: url(/imagenes.jpg/github.jpg);
-}
-
-.social-icon:nth-last-of-type(4) {
-  background-image: url(/imagenes.jpg/twitter1.jpg);
-}
-
-.footer-menu-container {
-  gap: 1rem;
-}
-
-.footer-menu-container {
+.footerNav ul li {
   list-style-type: none;
-  color: #f2f2f2;
-  font-size: 10px;
 }
 
-.menu-item {
-  margin: 1.5 rem;
-  cursor: pointer;
-  opacity: 0, 6;
+.socialIcons i {
+  font-size: 2em;
+  color: black;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
 }
 
-.menu-item:hover {
+.footerNav ul li {
+  font-size: 1.2em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+.footerNav ul li:hover {
   opacity: 1;
 }
 
-.copyright {
-  color: #f2f2f2;
-  opacity: 0.3;
+footer .socialIcons a:hover {
+  transform: translateY(-10px);
+}
+
+.botom p {
+  color: white;
   text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.designed {
+  text-transform: uppercase;
 }/*# sourceMappingURL=estilos.css.map */

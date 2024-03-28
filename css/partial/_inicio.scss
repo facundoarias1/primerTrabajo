@@ -1,45 +1,55 @@
 
 .grid1{
     display: grid;
+    min-height: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "inicio     producto"
-    "nuevo-contacto quienes-somos";
-    min-height: 100vh;
+    "inicio   producto"
+    "nuevo  quienes";
     list-style-type:none;}
     
     .ini{
         grid-area: inicio;
-
-        background-color: red;
-        background-image: url(/imagenes.jpg/portada\ -\ copia.webp);
-        background-size: cover;
-        }
+         background-color: red;
+        background-size:contain;
+        background-image: url(../../imagenes.jpg/facundo.arias) ;
+        background-position:center  ;
+        background-repeat: no-repeat;
         
+        
+        }
+  
+    
         .pro{
         grid-area: producto;
         background-color: gray;
-        background-image: url(/imagenes.jpg/producto.jpg);
+            background-image: url(../../imagenes.jpg/producto.jpg);
         background-repeat: no-repeat;
         background-size: contain;
         
         }
         
         .qui{
-        grid-area: quienes-somos;
-        background-color: white;
-        background-image: url(/imagenes.jpg/quienes\ somos.png);
+        grid-area: quienes;
+        background-color:black;
+        background-image: url(../../imagenes.jpg/quienes\ somos.png);
         background-repeat: no-repeat;
         background-size: contain;
         }
         
         .nue{
-        grid-area: nuevo-contacto;
-        background-color:white;
-        background-image: url(/imagenes.jpg/contacto.png);
+        grid-area: nuevo;
+        background-color:white; 
         background-repeat: no-repeat;
         background-size: contain;
-        
+        background-image: url(../../imagenes.jpg/contacto.png);
+        }
+
+        @media (max-width:800px){
+           .grid1{ grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+          grid-template-areas: "inicio" "producto" "quienes" "nuevo";
+            }
         }
     
